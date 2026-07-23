@@ -1,3 +1,13 @@
+ ---
+title: AI Sentiment Checker
+emoji: 🤖
+colorFrom: blue
+colorTo: green
+sdk: gradio
+app_file: app.py
+pinned: false
+---
+
 # AI Sentiment Checker
 
 This is a beginner-friendly AI project built with Python, Gradio, and Hugging Face Transformers.
