@@ -1,10 +1,15 @@
-import gradio as gr
+ import gradio as gr
+import spaces
 from transformers import pipeline
 
-classifier = pipeline("sentiment-analysis")
+classifier = pipeline(
+    "sentiment-analysis",
+    model="distilbert/distilbert-base-uncased-finetuned-sst-2-english"
+)
 
+@spaces.GPU
 def analyse_sentiment(text):
-    if not text.strip():
+    if not text or not text.strip():
         return "Please enter some text."
 
     result = classifier(text)[0]
